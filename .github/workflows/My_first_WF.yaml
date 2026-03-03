@@ -6,6 +6,9 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
+        - name: CheckOut
+          uses: actions/checkout@v6
+          
         - name: Welcome Banner
           run: echo "Welcome home darling"
 
