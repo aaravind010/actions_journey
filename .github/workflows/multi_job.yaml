@@ -12,6 +12,11 @@ jobs:
                 sudo apt-get install cowsay -y
                 cowsay -f dragon "I am the Dragon... Dracares" >> dragon.txt
                 sleep 30
+            - name: Upload the artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                name: dragon_file #logical_name
+                path: dragon.txt #actual name
     
     test_job_2:
         needs:
@@ -19,6 +24,11 @@ jobs:
         runs-on:
           - ubuntu-latest
         steps:
+            - name: Test the artifacts
+              uses: actions/download-artifact@v4
+              with:
+                name: dragon_file
+
             - name: Test the Dragon file availablity
               run: |
                 grep -i "dragon:" dragon.txt
@@ -30,5 +40,12 @@ jobs:
         runs-on:
           - ubuntu-latest
         steps:
+            - name: Deploy the actifact
+              uses: actions/download-artifact@v4
+              with:
+                name: dragon_file
+                
             - name: Read the file
-              run: cat dragon.txt
+              run: |
+                cat dragon.txt
+                echo "DEploying..............."
