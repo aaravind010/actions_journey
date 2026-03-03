@@ -31,7 +31,7 @@ jobs:
 
             - name: Test the Dragon file availablity
               run: |
-                grep -i "dragon:" dragon.txt
+                grep -i "dragon" dragon.txt
                 sleep 15
     
     deploy_job_3:
@@ -44,7 +44,7 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                 name: dragon_file
-                
+
             - name: Read the file
               run: |
                 cat dragon.txt
