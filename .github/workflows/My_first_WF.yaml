@@ -10,7 +10,7 @@ jobs:
           run: echo "Welcome home darling"
 
         - name: List the files
-          run: la -altrh
+          run: ls -altrh
 
         - name: Read the file
           run: cat README.md
