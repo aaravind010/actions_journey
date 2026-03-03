@@ -10,9 +10,6 @@ jobs:
             - name: checkout
               uses: actions/checkout@v6
 
-            - name: Generate ASCII art using linuxlogo
-              run: |
-                sudo apt install neofetch -y
-                neofetch
-
+            - name: Execute ASCII script
+              run: ./ascii-script.sh
         

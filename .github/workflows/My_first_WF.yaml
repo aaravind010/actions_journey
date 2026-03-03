@@ -9,6 +9,8 @@ jobs:
         - name: CheckOut
           uses: actions/checkout@v6
 
-          
-        - name: Executing Shell Script
-          run: ./ascii-script.sh
+        - name: Multiline command execution
+          run: |
+            echo "Welcome home darling"
+            ls -altr
+            cat README.md
