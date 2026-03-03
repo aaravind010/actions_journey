@@ -10,9 +10,10 @@ jobs:
             - name: checkout
               uses: actions/checkout@v6
 
-            - name: Execute ASCII script
+            - name: List the files
+              run: ls -altrh
+
+            - name: Execute ASCII Shell script
               run: |
-                ls -altr
-                pwd
                 chmod +x ascii-script.sh
                 ./ascii-script.sh       
