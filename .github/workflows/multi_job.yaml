@@ -9,7 +9,7 @@ jobs:
         steps:
             - name: Generate a ASCII art file
               run: |
-                apt install cowsay -y
+                apt-get install cowsay -y
                 cowsay -f dragon "I am the Dragon... Dracares" >> dragon.txt
                 sleep 30
     
