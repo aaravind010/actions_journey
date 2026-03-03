@@ -13,5 +13,5 @@ jobs:
             - name: Execute ASCII script
               run: |
                 ls -altr
-                chmod +x ascii-script
+                chmod +x ascii-script.sh
                 ./ascii-script.sh       
