@@ -1,4 +1,4 @@
-name: Generate ASCII art using linuxlogo
+name: Generate ASCII art using neofetch
 
 on: push
 
@@ -12,7 +12,7 @@ jobs:
 
             - name: Generate ASCII art using linuxlogo
               run: |
-                sudo apt install linuxlogo
-                linuxlogo
+                sudo apt install neofetch -y
+                neofetch
 
         
