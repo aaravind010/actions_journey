@@ -13,6 +13,6 @@ jobs:
             - name: Generate ASCII art using linuxlogo
               run: |
                 sudo apt install linuxlogo
-                linuxlogo >> logo.txt
-                cat logo.txt
+                linuxlogo
+
         
